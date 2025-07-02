@@ -53,3 +53,18 @@ Instead of predicting once per image, the model makes multiple predictions with 
 - Shearing
 - Brightness shifts
 - Horizontal flipping
+
+## 📥 Dataset Download
+Run the following command to download the dataset:
+import gdown
+
+# Google Drive shared link
+url = '[https://drive.google.com/uc?id=FILE_ID](https://drive.google.com/file/d/1KqcW3DQqgSavImVs699yZ4Zf_eprRgsS/view?usp=drive_link)'
+output = 'data.zip'
+gdown.download(url, output, quiet=False)
+
+# Unzip after download
+import zipfile
+with zipfile.ZipFile(output, 'r') as zip_ref:
+    zip_ref.extractall('data/')
+
